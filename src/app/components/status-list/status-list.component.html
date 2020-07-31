@@ -1,0 +1,25 @@
+<div *ngIf="statuses.length > 0">
+  <div *ngFor="let status of statuses" class="status">
+    <div class="status-header">
+      <span class="status-name">
+        {{status.name}}
+      <button type="button" class="btn btn-default btn-sm edit-status-button" (click)="openEditStatus(status)" ngbTooltip="Edit status">
+        <i class="fas fa-edit"></i>
+      </button>
+      <button class="btn btn-outline-light btn-sm edit-status-button" (click)="openAddTask(status)" ngbTooltip="Add new task">+</button>
+      </span>
+    </div>
+    <app-task-list [status]="status" [statuses]="statuses"></app-task-list>
+  </div>
+  <div class="status">
+    <div class="status-header">
+      <span class="status-name">
+        Add new status -->
+        <button class="btn btn-outline-light btn-sm edit-status-button" (click)="openAddStatus()">+</button>
+      </span>
+    </div>
+  </div>
+</div>
+<div *ngIf="statuses.length == 0">
+  Data loading...
+</div>

@@ -1,0 +1,31 @@
+<div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h4 class="modal-title">{{ title }}</h4>
+      <button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <form>
+        <div class="form-group">
+          <label for="task-title">Task name:</label>
+          <input type="text" class="form-control" id="task-title" name="title" #taskTitle [value]="task.title" (change)="task.title=taskTitle.value">
+        </div>
+        <div class="form-group">
+          <label for="task-owner">Task owner</label>
+          <input type="text" class="form-control" id="task-owner" name="owner" #taskOwner [value]="task.owner" (change)="task.owner=taskOwner.value">
+        </div>
+
+          <label for="task-status">Task owner</label>
+          <select name="status" class="form-control" #taskStatus id="task-status" [value]="task.status" (change)="task.status=taskStatus.value" >
+            <option *ngFor="let status of statuses" [value]="status.id">{{ status.name }}</option>
+          </select>
+      </form>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="save()">Save</button>
+      <button type="button" class="btn btn-outline-dark" (click)="activeModal.dismiss('Close click')">Close</button>
+    </div>
+  </div>
+</div>

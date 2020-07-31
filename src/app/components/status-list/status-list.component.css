@@ -1,0 +1,25 @@
+.status {
+  background: #0079bf;
+  color: white;
+  width: 280px;
+  float: left;
+  padding: 10px 15px;
+  margin: 20px;
+  border-radius: 20px;
+}
+
+.status-header {
+  border-bottom: 1px dashed black;
+  height: 40px;
+}
+
+.status-name {
+  width: 250px;
+  display: inline-block;
+}
+
+.edit-status-button {
+  color: white;
+  position: relative;
+  float: right;
+}

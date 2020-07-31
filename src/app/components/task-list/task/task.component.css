@@ -1,0 +1,10 @@
+.task {
+  width: 250px;
+  padding: 5px;
+}
+
+.edit-task-button {
+  color: white;
+  position: relative;
+  float: right;
+}
